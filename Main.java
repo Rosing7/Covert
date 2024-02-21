@@ -1,20 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package rupp_;
-
-/**
- *
- * @author Admin
- */
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Customer customer = new Customer("Drake", "Premium");
-        Sale sale = new Sale(customer, "29-01-2024");
-        sale.setServiceExpense(100.0);
-        sale.setProductExpense(550.0);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input amount of numbers to put in a list: ");
+        int numberAmount = input.nextInt();
+        int[] numbers = new int[numberAmount];
 
-        sale.DisplayInfo();
+        System.out.println("Input numbers: ");
+        for (int i = 0; i < numberAmount; i++){
+            System.out.print("Number " + (i+1) +": ");
+            numbers[i] = input.nextInt();
+        }
+
+        System.out.println("Output numbers: ");
+        for (int i = 0; i < numberAmount; i++){
+            System.out.println(numbers[i]);
+        }
+        input.close();
     }
 }
